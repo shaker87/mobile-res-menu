@@ -18,16 +18,14 @@ document.querySelectorAll(".menu-link").forEach((link) => {
    });
 });
 
-window.addEventListener('click', function(e){
-    if (!document.getElementById('menu').contains(e.target)){
-    // alert("Clicked outside l2 and logo-menu");
-    // burgerMenu.classList.remove("is-active");
-    //   navbarMenu.classList.remove("is-active");
-    //  document.getElementById('l2').style.height="0px"; //the same code you've used to hide the menu
-  } 
-  else{
-    
-  }
+
+
+// Close Navbar Menu on Click Outside
+window.addEventListener('click', function(e) {
+	if (!document.querySelector('#menu').contains(e.target) && !document.querySelector('.burger').contains(e.target)) {
+		burgerMenu.classList.remove("is-active");
+		navbarMenu.classList.remove("is-active");
+	}
 })
 
 // Change Header Background on Scrolling
